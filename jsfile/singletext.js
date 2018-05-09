@@ -8,28 +8,18 @@
   let possibleArray = Array.from(possible);
 
 
-function getMatch(Array1) {
-    
-setTimeout(function(){
-     for ( var i = 0; i < Array1.length; i++ ) {
- textResult =  Array1[i];
-      console.log(textResult);   
- 
-    
-     
-}
-}
-, 3000);
+(function getText(i) {
+	if (i == textArray.length) return;
+  setTimeout(function () {
+ textResult +=  textArray[i];
+      document.querySelector('.text-content').innerHTML = textResult;
+      console.log(textResult);
 
-
-}
-
-
- getMatch(textArray);
- 
-
-
-  
+    if (++i) {          // If i > 0, keep going
+      getText(i);       // Call the loop again, and pass it the current value of i
+    }
+  }, 300);
+})(0);
 
 
 
