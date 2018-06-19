@@ -8,7 +8,8 @@
   let possibleArray = Array.from(possible);
 
 
-(function getText(i) {
+function getText(i) {
+
 	if (i == textArray.length) return;
   setTimeout(function () {
  textResult +=  textArray[i];
@@ -18,8 +19,13 @@
     if (++i) {          // If i > 0, keep going
       getText(i);       // Call the loop again, and pass it the current value of i
     }
-  }, 300);
-})(0);
+  }, 150);
+}(0);
+
+ //let v = l;
+
+var x = new getText(0);
+console.log(x);
 
 
 
