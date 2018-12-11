@@ -38,32 +38,24 @@
             }
         ]
         // USING FOR LOOP
-        // var dog = [];
+        var animalList = [];
 
-        // for (var i = 0; animals.length < 5; i++) {
-        //     if (animals[i].species == 'dog') {
-        //         dog.push(animals[i].name);
-        //     }
-        // }
-        // console.log(dog);
-
-        // USING FILTER 1
-        // let dog = animals.filter(function (animal) {
-        //     if (animal.species === 'dog') {
-        //         return animal.name;
-        //     }
-        // })
-
-        // console.log(dog);
-
-        let dogs = function (animal) {
-            return animal.species === 'dog'
+        for (var i = 0; i < animals.length; i++) {
+            animalList.push(animals[i].name);
         }
+        console.log(animalList);
 
-        let isDog = animals.filter(dogs);
-        let otherAnimals = animals.map(dogs);
-        console.log(isDog);
-        console.log(otherAnimals);
+        // USING FOR MAP
+        let animalNames = animals.map(function (animal) {
+            return animal.name;
+        })
+
+        let animalNameSpecies = animals.map(function (animal) {
+            return animal.name + " is a " + animal.species;
+        })
+
+        console.log(animalNames);
+        console.log(animalNameSpecies);
     </script>
 </body>
 
