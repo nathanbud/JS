@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="">Give me numbers to sort</label>
+
+    <input type="text" id="inputNum">
+    <button id="submitA">Sort Ascending</button>
+    <button id="submitD">Sort Descending</button>
+
+    <script>
+        let buttonA = document.getElementById('submitA');
+        let buttonD = document.getElementById('submitD');
+
+        buttonA.addEventListener('click', sortNumbersA);
+        buttonD.addEventListener('click', sortNumbersD);
+
+        //Ascending
+        function sortNumbersA() {
+            let numbers = document.getElementById('inputNum').value;
+            let numToArray = numbers.split(" ").sort(function (x, y) {
+                return x - y;
+            });
+            console.log(numToArray);
+        }
+
+        //Descending
+        function sortNumbersD() {
+            let numbers = document.getElementById('inputNum').value;
+            let numToArray = numbers.split(" ").sort(function (x, y) {
+                return y - x;
+            });
+            console.log(numToArray);
+        }
+    </script>
+
+
+</body>
+
+</html>
