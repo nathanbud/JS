@@ -15,7 +15,16 @@
                 this.lname = lname;
                 this.fname = fname;
             }
+            getMarried(newLastName) {
+                this.lname = newLastName;
+
+            }
         }
+
+        const Joe = new Person('Doe', 'Joe');
+        console.log(`Last Name: ${Joe.lname} First Name: ${Joe.fname}`);
+        Joe.getMarried('Married');
+        console.log(Joe);
     </script>
 
 </body>
