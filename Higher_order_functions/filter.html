@@ -56,9 +56,7 @@
 
         // console.log(dog);
 
-        let dogs = function (animal) {
-            return animal.species === 'dog'
-        }
+        let dogs = animal => animal.species === 'dog';
 
         let isDog = animals.filter(dogs);
         let otherAnimals = animals.map(dogs);
